@@ -16,21 +16,67 @@
         android:background="#FFFFFF">
         <ImageView
             android:id="@+id/imgFoto" android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:src="@drawable/abc_scrubber_control_to_pressed_mtrl_005" />
+            android:layout_height="match_parent"
+            android:src="@drawable/quinto" />
 
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Text"
-            android:id="@+id/nombre" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="New Button"
-            android:id="@+id/button" />
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageHuesoblanco"
+                    android:src="@drawable/bonewhite"
+                    android:paddingLeft="5dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Catty"
+                    android:id="@+id/nombre"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="20dp"
+                    android:textStyle="bold|italic"
+                    android:paddingLeft="5dp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.5"
+                android:gravity="right">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="5"
+                    android:id="@+id/cantidad"
+                    android:gravity="center_vertical|center_horizontal"
+                    android:textSize="20dp"
+                    android:textStyle="bold"
+                    android:paddingRight="5dp" />
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/imageHuesoamarillo"
+                    android:src="@drawable/boneyellow"
+                    android:paddingRight="5dp" />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
     </LinearLayout>
 
 </android.support.v7.widget.CardView>

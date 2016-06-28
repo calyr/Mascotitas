@@ -6,6 +6,7 @@ import android.support.v7.widget.RecyclerView.ViewHolder;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -32,6 +33,7 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
     public void onBindViewHolder(MascotaViewHolder mascotaViewHolder, int i) {
         Mascota masconta = mascotas.get(i);
 //        mascotaViewHolder.imgFoto.setImageResource(contacto.getFoto() );
+        mascotaViewHolder.foto.setImageResource(masconta.getImagen());
         mascotaViewHolder.nombre.setText(masconta.getNombre());
 
     }
@@ -44,11 +46,12 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
     public static class MascotaViewHolder extends RecyclerView.ViewHolder{
 
         private TextView nombre;
+        private ImageView foto;
 
         public MascotaViewHolder(View itemView) {
             super(itemView);
             nombre = (TextView) itemView.findViewById(R.id.nombre);
-
+            foto = (ImageView) itemView.findViewById(R.id.imgFoto);
         }
     }
 }

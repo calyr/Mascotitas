@@ -3,25 +3,25 @@ package com.coursera.app.pm.mascotitas;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.support.v7.widget.Toolbar;
 
+
 import java.util.ArrayList;
 
-public class MainActivity extends AppCompatActivity {
+public class DetalleActivity extends AppCompatActivity {
 
+    private RecyclerView rv;
     private ArrayList<Mascota> mascotas;
     private Toolbar mToolbar;
-    private RecyclerView rv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_detalle);
         mToolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(mToolbar);
 
@@ -29,15 +29,15 @@ public class MainActivity extends AppCompatActivity {
         mascotas = new ArrayList<Mascota>();
 
         mascotas.add(new Mascota(R.drawable.primero,"Rambo",0));
-        mascotas.add(new Mascota(R.drawable.segundo,"Dina",1));
+        //mascotas.add(new Mascota(R.drawable.segundo,"Dina",1));
         mascotas.add(new Mascota(R.drawable.tercero,"Perla",2));
-        mascotas.add(new Mascota(R.drawable.cuarto,"Steben",3));
+        //mascotas.add(new Mascota(R.drawable.cuarto,"Steben",3));
         mascotas.add(new Mascota(R.drawable.quinto,"Choco",3));
-        mascotas.add(new Mascota(R.drawable.sexto,"Filulay",3));
+        //mascotas.add(new Mascota(R.drawable.sexto,"Filulay",3));
         mascotas.add(new Mascota(R.drawable.septimo,"Betoben",3));
         mascotas.add(new Mascota(R.drawable.octavo,"Mimo",3));
 
-        rv = (RecyclerView) findViewById(R.id.rvMascotas);
+        rv = (RecyclerView) findViewById(R.id.rvMascotasDetalle);
 
         //GridLayoutManager glm = new GridLayoutManager(this,2);
 
@@ -47,6 +47,7 @@ public class MainActivity extends AppCompatActivity {
         //rv.setLayoutManager(glm);
         rv.setLayoutManager(llm);
         inicializarListaMascotas();
+
     }
 
     private void inicializarListaMascotas() {
@@ -57,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+        getMenuInflater().inflate(R.menu.menu_detalle, menu);
         return true;
     }
 
@@ -78,4 +79,5 @@ public class MainActivity extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
+
 }
