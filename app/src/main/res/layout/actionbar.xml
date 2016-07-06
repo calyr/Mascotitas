@@ -9,4 +9,5 @@
     android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
     app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
     android:id="@+id/appbar"
+    app:layout_scrollFlags="scroll|enterAlways"
     />

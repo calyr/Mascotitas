@@ -51,7 +51,7 @@ public class DetalleActivity extends AppCompatActivity {
     }
 
     private void inicializarListaMascotas() {
-        MascotaAdapter ada = new MascotaAdapter(mascotas);
+        MascotaAdapter ada = new MascotaAdapter(mascotas, 0);
         rv.setAdapter( ada );
     }
 

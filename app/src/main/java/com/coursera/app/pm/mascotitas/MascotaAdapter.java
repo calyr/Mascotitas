@@ -18,14 +18,23 @@ public class MascotaAdapter extends RecyclerView.Adapter<MascotaAdapter.MascotaV
 
 
     ArrayList<Mascota> mascotas;
+    private int tipo = 0;
 
-    public MascotaAdapter(ArrayList<Mascota> mascotas){
+    public MascotaAdapter(ArrayList<Mascota> mascotas, int tipo) {
         this.mascotas = mascotas;
     }
 
     @Override
     public MascotaViewHolder onCreateViewHolder(ViewGroup viewGroup, int i) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cardview_mascota, viewGroup, false);
+        View v;
+        if (tipo == 1) {
+            v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cardview_mascotaperfil, viewGroup, false);
+        } else {
+            v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.cardview_mascota, viewGroup, false);
+        }
+
+
+
         return new MascotaViewHolder(v);
     }
 
